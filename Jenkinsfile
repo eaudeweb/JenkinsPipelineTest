@@ -9,8 +9,8 @@ pipeline {
     stage('Message') {
       steps {
         parallel(
-          'Message1': {},
-          'Message2': {},
+          'Message1': {sh '''docker ps'''},
+          'Message2': {sh '''docker ps'''},
         )
       }
     }
