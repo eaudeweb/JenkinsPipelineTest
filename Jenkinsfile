@@ -5,6 +5,17 @@ pipeline {
         GIT_NAME = "JenkinsPipelineTest"
     }
 
+  stages {
+    stage('Message') {
+      steps {
+        parallel(
+          'Message1': {},
+          'Message2': {},
+        )
+      }
+    }
+  }
+
   post {
     changed {
       script {
