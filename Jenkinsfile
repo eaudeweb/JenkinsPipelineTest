@@ -4,14 +4,6 @@ pipeline {
     stage('Message') {
       steps {
         parallel(
-          "Message1": {
-            sh 'docker ps'
-            
-          },
-          "Message2": {
-            sh 'docker ps'
-            
-          },
           "Print Message": {
             echo 'Test Message'
             
