@@ -11,6 +11,14 @@ pipeline {
           "Message2": {
             sh 'docker ps'
             
+          },
+          "Print Message": {
+            echo 'Test Message'
+            
+          },
+          "Print Message 2": {
+            echo 'Second test message'
+            
           }
         )
       }
